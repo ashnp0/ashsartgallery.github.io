@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ash's Art Gallery</title>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+	
+<style>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">  
+</style>
+</head>
+
+<body>
+	<header>
+		<div class="logo">Ash's Art Gallery</div>
+		<div>	
+			<img src="q.png" class="q" width="45" height="45">
+		</div>
+		<nav>
+			<ul>	
+				<li><a class="active" onclick="navigate('home')">Home</a></li>
+				<li><a>|</a></li>
+				<li><a class="we" onclick="navigate('info')">Info</a></li>	
+				<li><a>|</a></li>				
+				<li><a class="button" onclick="navigate('gallery')">Gallery</a></li>
+				<li><a>|</a></li>				
+				<li><a class="button" onclick="navigate('contact')">Contact</a></li>
+			</ul>	
+		</nav>
+	</header>	
+	
+	<main>
+		<div id="content">
+			<!-- home -->
+			<div id="home" style="display: block;">
+				<section class="homepage">
+					<h2>Home >> Welcome to Ash's Art Gallery!</h2>  
+				</section> 	  	
+				<section class="active">
+					<h1>Welcome to Ash's Art Gallery!</h1>  
+				</section> 
+				<section class="im">
+					<p>My art gallery features a collection of digital artworks that embodies simplicity in its purest form. Feel free to explore and immerse yourself in the world of digital art. Join me on this artistic adventure and allow the magic of digital artwork to enchant your senses in a world where imagination has no limits and pixels paint dreams. You've arrived in a digital wonderland!</p>		  
+				</section>		
+					<img src="jed 2.jpg" class="je" width="100%" height="80">				
+				<section class="button-section">
+					<button class="go-to-gallery-button" onclick="navigate('gallery')">Explore the Art Gallery</button>
+				</section>				
+			</div>
+			<!-- info -->			
+			<div id="info" style="display: none;">
+				<section class="infopage">
+					<h2>Info >> About the Artist and About Ash's Art Gallery</h2>  
+				</section> 	  	
+				<section class="we">
+					<h1>About the Artist</h1>  
+				</section>					
+				<section class="in">
+					<p>I am Ashley Nicole Permelona, a student at Bicol State College of Applied Sciences and Technology. I am an artist who is still in the early stages of my artistic journey. I must confess that I rarely find myself drawing, only doing so when the mood strikes me. Additionally, I have yet to settle on my own art style as I am still in the process of exploration. However, despite these uncertainties, my passion for art remains undeterred, and I eagerly embrace the process of self-discovery as I seek to find my artistic identity.</p>		  
+				</section>
+				<section class="pa">
+					<h1>About Ash's Art Gallery</h1>					
+				</section>
+				<section class="ab">				
+					<p>I have always been drawn to simplicity and its ability to communicate profound messages with clarity and elegance. In a world filled with constant noise and complexity, I find solace and beauty in the simplicity of forms and lines. 
+					By stripping away the excess, my digital artworks create a sense of tranquility that invites viewers to pause and reconnect with their own inner world.
+					Through my minimalistic approach, I aim to engage viewers in a dialogue between the artwork and their own perceptions. Simple lines and shapes become a visual language, open to interpretation and personal connection. 
+					It is my hope that each viewer can find their own unique meaning and resonance within my art.</p>				
+				</section>			
+			</div>
+			<!-- gallery -->			
+			<div id="gallery" style="display: none;">			
+				<section class="gallerypage">
+					<h2>Gallery >> Ash's Art Gallery</h2>  
+				</section>
+				<section class="ga">
+					<h1>Ash's Art Gallery | My Portfolio</h1>  
+				</section>	
+				<section class="image-gallery">
+					<img src="umaru.png" class="um" width="365" height="500">			
+					<img src="jed hand.jpg" class="ha" width="835" height="345">	
+					<img src="vector.jpg" class="ve" width="440" height="520">	
+					<img src="nude woman.png" class="nu" width="350" height="520">	
+					<img src="pokemon model.jpg" class="po" width="363" height="250">	
+					<img src="nude man 1.png" class="man" width="361" height="463">	
+					<img src="jed 1.jpg" class="jed" width="835" height="350">		
+					<img src="own character.png" class="ow" width="1230" height="500">
+					<img src="caricature.jpg" class="ca" width="600" height="400">			
+					<img src="hand poses.png" class="han" width="600" height="400">						
+				</section>				
+			
+			</div>
+			<!-- contact -->			
+			<div id="contact" style="display: none;">			
+				<section class="contactpage">
+					<h2>Contact >> Contact Me</h2>  
+				</section>
+				<section class="co">
+					<h1>Contact Me</h1>  
+				</section>
+				<section class="pho">
+					<h2>Phone Number:</h2>
+					<p class="num">0961 085 5424</p>		
+				</section>
+				<section class="ema">
+					<h2>Email Addresses:</h2>
+					<p class="num">ashleynicolepermelona@gmail.com</p>					
+				</section>	
+				<section class="ema">
+					<p class="num1">anspermelona@astean.biscast.edu.ph</p>					
+				</section>	
+				<section class="soc">
+					<h2>Facebook:</h2>
+					<p class="num"><a href="https://www.facebook.com/y4shumi/">Ashley Nicole Permelona</a></p>		
+				</section>				
+			</div> 			
+		</div>
+	</main> 
+	
+	<div id="content"></div>
+
+	<script>
+	function navigate(page) {
+		var contentDiv = document.getElementById("content");
+		var content;
+		var homeSection = document.getElementById("home");
+		var infoSection = document.getElementById("info");
+		var gallerySection = document.getElementById("gallery");
+		var contactSection = document.getElementById("contact");
+
+		switch (page) {
+			case 'home':
+				homeSection.style.display = 'block';
+				infoSection.style.display = 'none';
+				gallerySection.style.display = 'none';
+				contactSection.style.display = 'none';
+				break;
+			case 'info':
+				homeSection.style.display = 'none';
+				infoSection.style.display = 'block';
+				gallerySection.style.display = 'none';
+				contactSection.style.display = 'none';
+				break;
+			case 'gallery':
+				homeSection.style.display = 'none';
+				infoSection.style.display = 'none';
+				gallerySection.style.display = 'block';
+				contactSection.style.display = 'none';
+				break;
+			case 'contact':
+				homeSection.style.display = 'none';
+				infoSection.style.display = 'none';
+				gallerySection.style.display = 'none';
+				contactSection.style.display = 'block';
+				break;
+			default:
+				content = "<h1>Page Not Found</h1><p>The requested page does not exist.</p>";
+		}
+	}
+	</script>
+	</body>
+</html>
